@@ -9,6 +9,10 @@ header {
     background: #333;
     color: #fff;
     padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 header .container {
@@ -22,6 +26,12 @@ header .container {
 
 header h1 {
     margin: 0;
+    order: 1;
+}
+
+header nav {
+    order: 2;
+    flex-grow: 1;
 }
 
 header nav ul {
@@ -29,6 +39,7 @@ header nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: center;
 }
 
 header nav ul li {
@@ -42,6 +53,7 @@ header nav ul li a {
 
 .section {
     padding: 60px 0;
+    margin-top: 60px; /* Adjust for fixed header */
 }
 
 .container {
@@ -58,13 +70,31 @@ header nav ul li a {
 #skills ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Add space between items */
 }
 
 #skills ul li {
     background: #f4f4f4;
     margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 20px;
+    border-radius: 0; /* Set to square shape */
+    flex: 1 1 calc(33.333% - 20px); /* Adjust for spacing */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#skills ul li:hover {
+    background-color: #fbcd71; /* Set hover color */
+}
+
+#skills ul li i {
+    font-size: 2em;
+    color: #219ebc;
 }
 
 form {
@@ -80,22 +110,33 @@ form input, form textarea {
     margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 0; /* Set to square shape */
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 
 form button {
     padding: 10px;
     background: #333;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 0; /* Set to square shape */
     cursor: pointer;
 }
 
 form button:hover {
-    background: #555;
+    background: #fbcd71;
 }
 
 footer {
-    background: #343a40;
+    background: #34353a;
+    border-radius: 0; /* Set to square shape */
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
 }
