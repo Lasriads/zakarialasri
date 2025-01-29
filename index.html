@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Zakaria Lasri</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
-            background-color: #343a40;
+            background-color: #34353a; /* Set page background color */
             color: #d9dcd6;
         }
+        section {
+            width: 100%;
+            height: 28vh;
+            padding: 20px;
+            margin: 10px auto;
+        }
         #hero {
-            background-color: #343a40;
+            background-color: #34353a; /* Set hero background color */
         }
         #skills ul {
             list-style: none;
@@ -42,12 +49,22 @@
             background-color: #343a40;
         }
         .contact-me {
-            border: 4px dashed #d9dcd6;
+            margin: 20px 0 0 0; /* Add space above the button */
+            border: 2px solid #fbcd71; /* Change border style */
+            padding: 10px 20px; /* Make button inside bigger */
+            color: #fff; /* Set font color to white */
+            transition: background-color 0.3s ease;
+            text-decoration: none; /* Remove underline */
+        }
+        .contact-me:hover {
+            background-color: #fbcd71; /* Set hover color */
         }
         #hero .container {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: space-around ;
+            margin-bottom: auto;
+            padding: 10px 10; /* Reduce padding to reduce height */
         }
         #hero img {
             max-width: 40%;
@@ -71,16 +88,22 @@
         .nav-button {
             margin-left: auto;
             padding: 10px 20px;
-            background-color: #219ebc;
-            color: #343a40;
-            border: none;
+            background-color: #343a40; /* Set background color */
+            color: #fff; /* Set text color to white */
+            border: 2px solid #fbcd71; /* Set border color */
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
             text-decoration: none;
         }
         .nav-button:hover {
-            background-color: #176c8a;
+            background-color: #fbcd71; /* Set hover color */
+        }
+        #hero h2 {
+            color: #fbcd71; /* Set color */
+        }
+        #about {
+            background-color: #30333a; /* Set background color */
         }
     </style>
 </head>
@@ -103,9 +126,9 @@
     <section id="hero" class="section">
         <div class="container">
             <div>
-                <h2>IM Zakaria Lasri</h2>
+                <h2>I'M Zakaria Lasri</h2>
                 <p>Fullstack Developer & Web designer</p>
-                <a href="#contact" class="contact-me" style="border: 2px solid black;">Contact Me</a>
+                <a href="zakriazakarilasri@gmail.com" class="contact-me" target="_blank">Contact Me</a>
             </div>
             <img src="img/zakaria lasri.png" alt="Zakaria Lasri">
         </div>
@@ -113,17 +136,13 @@
 
     <section id="about" class="section">
         <div class="container">
-            <h2>About</h2>
-            <p>Sonic Python Developer. Inner award and advanced in journal web at <a href="http://www.coastarthe.de/blog/dg-1">coastarthe.de</a>. Dane no corps safeguards issues of modern traffic or for clues. Reasons are to characterize an organization and/or the nature of the business, and do not necessarily be able to understand, create or use software or provide specific services working for.</p>
+            <h2>About Me</h2>
+            <p>Hi, I’m Zakaria Lasri, currently studying for a Bachelor’s degree in Management and Public Administration at the University of Jaén, Spain. I have a passion for organization, business management, and public administration, and I’m always eager to learn and grow. My educational background includes an Abitur in Life and Geosciences from Al Fadl University and Imam Al Ghazali Gymnasium.
+
+                I also have technical skills in HTML, CSS, JavaScript, Adobe, Microsoft Word, and Excel, which I enjoy using for different projects.</p>
         </div>
     </section>
 
-    <section id="experience" class="section">
-        <div class="container">
-            <h2>Experience</h2>
-            <p>Details about your experience go here.</p>
-        </div>
-    </section>
 
     <section id="skills" class="section">
         <div class="container">
@@ -164,4 +183,5 @@
 
     <script src="script.js"></script>
 </body>
+</html>
 </html>
