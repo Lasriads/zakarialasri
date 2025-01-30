@@ -264,11 +264,11 @@ https://www.tooplate.com/view/2115-marvel
               <form action="" method="get">
                 <div class="row">
                   <div class="col-lg-6 col-12">
-                    <input type="text" class="form-control" name="name" placeholder="Your Name" id="name">
+                    <input type="text" class="form-control" name="name" placeholder="Your Name" id="Full Name" required /><br />
                   </div>
 
                   <div class="col-lg-6 col-12">
-                    <input type="email" class="form-control" name="email" placeholder="Email" id="email">
+                    <input type="email" class="form-control" name="email" placeholder="Email" id="Email Id">
                   </div>
 
                   <div class="col-12">
@@ -276,7 +276,7 @@ https://www.tooplate.com/view/2115-marvel
                   </div>
 
                   <div class="ml-lg-auto col-lg-5 col-12">
-                    <input type="submit" class="form-control submit-btn" value="Send">
+                    <button type="submit" class="form-control submit-btn" value="Send" onclick="SendMail()">Send</button>
                   </div>
                 </div>
               </form>
@@ -309,21 +309,16 @@ https://www.tooplate.com/view/2115-marvel
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
-    <script>
-      document.getElementById("contactForm").addEventListener("submit", async function(event) {
-          event.preventDefault(); // Prevents default form submission
-      
-          let formData = new FormData(this);
-      
-          let response = await fetch("send_email.php", {
-              method: "POST",
-              body: formData
-          });
-      
-          let result = await response.text();
-          document.getElementById("statusMessage").innerText = result;
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "YOUR_PUBLIC_KEY",
       });
-      </script>
+   })();
+</script>
       
 
   </body>
