@@ -309,6 +309,22 @@ https://www.tooplate.com/view/2115-marvel
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+      document.getElementById("contactForm").addEventListener("submit", async function(event) {
+          event.preventDefault(); // Prevents default form submission
+      
+          let formData = new FormData(this);
+      
+          let response = await fetch("send_email.php", {
+              method: "POST",
+              body: formData
+          });
+      
+          let result = await response.text();
+          document.getElementById("statusMessage").innerText = result;
+      });
+      </script>
+      
 
   </body>
 </html>
