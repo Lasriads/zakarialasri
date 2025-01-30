@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="Zakaria lasri" content="">
 
     <title>Zakaria Lasri Portfolio</title>
 
@@ -12,6 +12,14 @@
     <link rel="stylesheet" href="css/unicons.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <script src="js/script.js" type="text/javascript"></script>
+    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+            (function(){
+             emailjs.init({"KpXnsLigViPWoIebh"});
+            })();
+     </script>
 
     <!-- MAIN STYLE -->
     <link rel="stylesheet" href="css/tooplate-style.css">
@@ -264,19 +272,19 @@ https://www.tooplate.com/view/2115-marvel
               <form action="" method="get">
                 <div class="row">
                   <div class="col-lg-6 col-12">
-                    <input type="text" class="form-control" name="name" placeholder="Your Name" id="Full Name" required /><br />
+                    <input type="text" class="form-control" name="name" placeholder="Your Name" id="Full Name" required />
                   </div>
 
                   <div class="col-lg-6 col-12">
-                    <input type="email" class="form-control" name="email" placeholder="Email" id="Email Id">
+                    <input type="email" class="form-control" name="email" placeholder="Email" id="Email Id" required />
                   </div>
 
                   <div class="col-12">
-                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message"></textarea>
+                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message" required ></textarea>
                   </div>
 
                   <div class="ml-lg-auto col-lg-5 col-12">
-                    <button type="submit" class="form-control submit-btn" value="Send" onclick="SendMail()">Send</button>
+                    <button  class="form-control submit-btn" value="Send" onclick="SendMail()">Send</button>
                   </div>
                 </div>
               </form>
@@ -309,16 +317,7 @@ https://www.tooplate.com/view/2115-marvel
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "YOUR_PUBLIC_KEY",
-      });
-   })();
-</script>
+
       
 
   </body>
