@@ -6,10 +6,7 @@ function SendMail() {
     message : document.getElementById("message").value
   };
 
-  emailjs.send("service_mv2a5np", "template_athvw5f", params)
-  .then(function (res) {
-    alert("Success! Status: " + res.status);
-  }).catch(function (err) {
-    alert("Error: " + err);
-  });
+  emailjs.send("service_mv2a5np", "template_athvw5f", params).then(function (res) {
+    alert("Succes! " + res.status);
+  })
 }
