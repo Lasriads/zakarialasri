@@ -7,6 +7,8 @@ function SendMail() {
   };
 
   emailjs.send("service_mv2a5np", "template_athvw5f", params).then(function (res) {
-    alert("Succes! " + res.status);
-  })
+    alert("Success! Your message has been sent.");
+  }).catch(function(error) {
+    alert("Error: " + error.text);
+  });
 }
